@@ -12,6 +12,10 @@
         <members>APIIntegration__mdt</members>
         <name>CustomObject</name>
     </types>
+	<types>
+		<members>APIIntegration__mdt-API Integration Layout</members>
+		<name>Layout</name>
+	</types>
     <types>
         <members>NHAPI</members>
         <name>NamedCredential</name>
