@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>IntegrationUtility</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>APIIntegration.Sample_Callout</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>APIIntegration__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>NHAPI</members>
+        <name>NamedCredential</name>
+    </types>
+    <version>50.0</version>
+</Package>
