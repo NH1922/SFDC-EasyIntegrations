@@ -59,7 +59,7 @@ public with sharing class IntegrationUtility {
                 requestMap.put(key,Decimal.valueOf(value));
             }else if(Pattern.matches('DATETIME\\(.*\\)', value)){
                 String dateFormat = value.substringBetween('(',')');
-                requestMap.put(key, DateTime.now().format(dateFormat));
+                requestMap.put(key, String.isBlank(dateFormat) ? DateTime.now().format() :  DateTime.now().format(dateFormat));
             }else if(value.startsWith('\"') && value.endsWith('\"')){
                 requestMap.put(key,value.substringBetween('"'));
             }else if(value.contains('.') && tokens.size() == 2){
