@@ -1,10 +1,18 @@
+/**
+ * @description       : 
+ * @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+ * @group             : 
+ * @last modified on  : 03-28-2022
+ * @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+**/
 public with sharing class IntegrationUtility {
 
     private APIIntegration__mdt callout;
     public IntegrationUtility(String APIIntegrationName ) {
-        this.callout = [SELECT Id, Endpoint__c, HTTPMethod__c, DeveloperName, RequestBody__c, RequestHeaders__c, Timeout__c 
-                               FROM APIIntegration__mdt 
-                               WHERE DeveloperName = :APIIntegrationName];
+        this.callout = [SELECT Id, Endpoint__c, HTTPMethod__c, DeveloperName, RequestBody__c, RequestHeaders__c, Timeout__c, ResponseMapping__c
+                        FROM APIIntegration__mdt 
+                        WHERE DeveloperName = :APIIntegrationName
+                        WITH SECURITY_ENFORCED];
     }
 
     /**
